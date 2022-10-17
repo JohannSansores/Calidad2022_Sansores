@@ -15,12 +15,12 @@ public float multiplicacion(float primerFactor, float segundoFactor) {
 	return ultimoResultado = primerFactor * segundoFactor;
 }
 
-public float divisionEntera(int dividendo, int divisor) {
-	return ultimoResultado = dividendo / divisor;
+public float divisionEntera(double dividendo, double divisor) {
+	return ultimoResultado = (float) (dividendo / divisor);
 }
 
-public float division(float dividendo, float divisor) {
-	return ultimoResultado = dividendo / divisor;
+public float division(double arg1, double arg2) {
+	return ultimoResultado = (float) (arg1 / arg2);
 }
 
 public float getUltimoResultado() {

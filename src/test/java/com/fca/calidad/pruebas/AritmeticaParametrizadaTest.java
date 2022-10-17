@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -23,16 +25,21 @@ public class AritmeticaParametrizadaTest {
 		this.arg2 = arg2;
 		this.arg3 = arg3;
 	}
+	
+	@Parameters
 	public static Collection<Object[]> data(){
 		return Arrays.asList(new Object[][] {
-			{4, 2, 8},
-			{6, -3, -18},
-			{-5, -5, 25}
+			{4, 2, 2},
+			{6, -3, -2},
+			{5, 5, 1},
+			{5, 2, 2.5f},
+			{5, -2, -2.5f}
 		});
 	}
 
 	@Before
 	public void setUp() throws Exception {
+		miAritmetica = new Aritmetica();
 	}
 
 	@After
@@ -40,7 +47,10 @@ public class AritmeticaParametrizadaTest {
 	}
 
 	@Test
-	public void test() {
+	public void divisionTest() {
+		double resEjecucion = miAritmetica.division(this.arg1, this.arg2);
+		assertThat(this.arg3, is(resEjecucion));
+		
 	}
 
 }
