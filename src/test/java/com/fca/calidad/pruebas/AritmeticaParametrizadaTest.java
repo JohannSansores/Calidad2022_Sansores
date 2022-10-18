@@ -50,7 +50,5 @@ public class AritmeticaParametrizadaTest {
 	public void divisionTest() {
 		double resEjecucion = miAritmetica.division(this.arg1, this.arg2);
 		assertThat(this.arg3, is(resEjecucion));
-		
 	}
-
 }
