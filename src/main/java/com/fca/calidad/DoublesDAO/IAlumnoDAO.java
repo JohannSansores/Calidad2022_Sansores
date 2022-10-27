@@ -5,7 +5,4 @@ public interface IAlumnoDAO {
 	public Boolean deleteAlumno(Alumno a);
 	public Boolean updateEmail(Alumno a);
 	public Alumno searchAlumno(String id);
-	
-	
-
 }
