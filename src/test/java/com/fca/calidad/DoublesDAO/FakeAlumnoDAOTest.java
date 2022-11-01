@@ -34,7 +34,7 @@ public class FakeAlumnoDAOTest {
 			public Alumno answer(InvocationOnMock invocation) throws Throwable{
 				String arg = (String) invocation.getArguments()[0];
 				baseDatos.get(arg);
-				return ;
+				return arg;
 			}
 		});
 		//Setup
