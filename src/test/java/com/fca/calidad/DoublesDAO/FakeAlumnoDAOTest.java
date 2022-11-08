@@ -1,4 +1,4 @@
-package com.fca.calidad.doublesDAO;
+package com.fca.calidad.DoublesDAO;
 
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.*;
@@ -45,7 +45,7 @@ public class FakeAlumnoDAOTest {
 		});
 	// Setup
 	// Create a
-	Alumno a = new Alumno("nombre", "id", 21, "email");
+	Alumno a = new Alumno("nombre", "id", "email", 21);
 	
 	// Check sizeBefore baseDatos
 	int sizeBefore = baseDatos.size();
@@ -73,7 +73,7 @@ public class FakeAlumnoDAOTest {
 		});
 		// Setup
 		// Create a
-		Alumno a = new Alumno("nombre", "1", 21, "email");
+		Alumno a = new Alumno("nombre", "1", "email", 21);
 		
 		// Save in baseDatos
 		baseDatos.put("1", a);
@@ -104,19 +104,19 @@ public class FakeAlumnoDAOTest {
 		});
 		// Setup
 		// add to baseDatos
-		Alumno a = new Alumno("nombre", "id", 21, "email");
+		Alumno a = new Alumno("nombre", "id", "email", 21);
 		baseDatos.put("1", a);
 
 		// Set new email
 		String nuevoCorreo = "nuevoCorreo";
-		a.setCorreo(nuevoCorreo);
+		a.setEmail(nuevoCorreo);
 		
 		// Call update method
 		Boolean res = DAO.updateEmail(a);
 		
 		// Verify
 		String valorEsperado = nuevoCorreo;
-		String valorEjecucion = baseDatos.get("1").getCorreo();
+		String valorEjecucion = baseDatos.get("1").getEmail();
 		assertThat(valorEsperado,is(valorEjecucion));
 		System.out.println("Resultado updateEmail: " + res);
 	}
@@ -135,7 +135,7 @@ public class FakeAlumnoDAOTest {
 		});
 		// Setup
 		// add to baseDatos
-		Alumno a = new Alumno("nombre", "1", 21, "email");
+		Alumno a = new Alumno("nombre", "1", "email", 21);
 		baseDatos.put("1", a);
 
 		// Call search method
@@ -145,12 +145,12 @@ public class FakeAlumnoDAOTest {
 		String nomEsperado = res.getNombre();
 		String idEsperado = res.getId();
 		int edadEsperado = res.getEdad();
-		String emailEsperado = res.getCorreo();
+		String emailEsperado = res.getEmail();
 
 		String nomEjecucion = baseDatos.get("1").getNombre();
 		String idEjecucion = baseDatos.get("1").getId();
 		int edadEjecucion = baseDatos.get("1").getEdad();
-		String emailEjecucion = baseDatos.get("1").getCorreo();
+		String emailEjecucion = baseDatos.get("1").getEmail();
 		
 		assertThat(nomEsperado,is(nomEjecucion));
 		assertThat(idEsperado,is(idEjecucion));
