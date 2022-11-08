@@ -17,9 +17,13 @@ import org.dbunit.operation.DatabaseOperation;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.fca.calidad.dbunit.DAOEstudianteSQLlite;
+import com.fca.calidad.dbunit.Estudiante;
+
 import static org.hamcrest.MatcherAssert.assertThat; 
 import static org.hamcrest.Matchers.*;
-import com.anahuac.calidad.curdMOCK.*;
+//import com.anahuac.calidad.curdMOCK.*;
 
 
 import junit.framework.TestCase;
@@ -48,7 +52,7 @@ public class DaoEstudiantetestSqlLiteTest extends TestCase{
 		Connection jdbcConnection;
 		
 		jdbcConnection = DriverManager.getConnection
-				("jdbc:sqlite:/Users/patriciaortegon/Documents/Personales/Mayab/ENERO-MAYO-2022/calidad/parcial2/Alan/CAlidad2022/Alumnos.db");
+				("jdbc:sqlite:C:\\Users\\fca\\Documents\\Calidad2022_Sansores\\Calidad2022_Sansores\\src\\resources\\Alumnos.db");
 		
 		connection = new DatabaseConnection(jdbcConnection);
 		
