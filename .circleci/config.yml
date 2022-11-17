@@ -24,27 +24,27 @@ jobs:
           command: mvn -B -DskipTests clean package
       # Then run your tests!
       - run:
-          name: TestCalculadora
+          name: Test
           command: echo "Inicio de las pruebas de calculadora"
           command: mvn test -Dtest="AritmeticaTest"
           command: echo "Fin de las pruebas de calculadora"
       - run:
-          name: TestCalculadoraParametrizada
+          name: Test
           command: echo "Inicia de las pruebas parametrizadas"
           command: mvn test -Dtest="AritmeticaParametrizadaTest"
           command: echo "Fin de las pruebas parametrizadas"
       - run:
-          name: TestDAOMokito
+          name: Test
           command: echo "Inicio de las pruebas con Mokito"
           command: mvn test -Dtest="FakeAlumnoDAOTest"
           command: echo "Fin de las pruebas con Mokito"
       - run:
-          name: TestGoogle
+          name: Test
           command: echo "Inicio de las pruebas con Google"
           command: mvn test -Dtest="GoogleTest"
           command: echo "Fin de las pruebas con Google"
       - run:
-          name: TestMernCrud
+          name: Test
           command: echo "Inicio de las pruebas de MernCrud"
           command: mvn test -Dtest="MernCrudTest"
           command: echo "Fin de las pruebas de MernCrud"
