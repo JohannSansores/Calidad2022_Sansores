@@ -28,26 +28,26 @@ jobs:
           command: echo "Inicio de las pruebas de calculadora"
           command: mvn test -Dtest="AritmeticaTest"
           command: echo "Fin de las pruebas de calculadora"
-      - run:
-          name: Test
-          command: echo "Inicia de las pruebas parametrizadas"
-          command: mvn test -Dtest="AritmeticaParametrizadaTest"
-          command: echo "Fin de las pruebas parametrizadas"
-      - run:
-          name: Test
-          command: echo "Inicio de las pruebas con Mokito"
-          command: mvn test -Dtest="FakeAlumnoDAOTest"
-          command: echo "Fin de las pruebas con Mokito"
-      - run:
-          name: Test
-          command: echo "Inicio de las pruebas con Google"
-          command: mvn test -Dtest="GoogleTest"
-          command: echo "Fin de las pruebas con Google"
-      - run:
-          name: Test
-          command: echo "Inicio de las pruebas de MernCrud"
-          command: mvn test -Dtest="MernCrudTest"
-          command: echo "Fin de las pruebas de MernCrud"
+#      - run:
+#          name: Test
+#          command: echo "Inicia de las pruebas parametrizadas"
+#          command: mvn test -Dtest="AritmeticaParametrizadaTest"
+#          command: echo "Fin de las pruebas parametrizadas"
+#      - run:
+#          name: Test
+#          command: echo "Inicio de las pruebas con Mokito"
+#          command: mvn test -Dtest="FakeAlumnoDAOTest"
+#          command: echo "Fin de las pruebas con Mokito"
+#      - run:
+#          name: Test
+#          command: echo "Inicio de las pruebas con Google"
+#          command: mvn test -Dtest="GoogleTest"
+#          command: echo "Fin de las pruebas con Google"
+#      - run:
+#          name: Test
+#          command: echo "Inicio de las pruebas de MernCrud"
+#          command: mvn test -Dtest="MernCrudTest"
+#          command: echo "Fin de las pruebas de MernCrud"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
