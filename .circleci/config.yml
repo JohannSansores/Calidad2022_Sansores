@@ -24,20 +24,20 @@ jobs:
           command: mvn -B -DskipTests clean package
       # Then run your tests!
       - run:
-          name: Test
-          command: echo "------Inicio de las pruebas de calculadora------" && mvn test -Dtest="AritmeticaTest" && echo "------Fin de las pruebas de calculadora------"
+          name: TestCalculadora
+          command: mvn test -Dtest="AritmeticaTest"
       - run:
-          name: Test
-          command: echo "------Inicia de las pruebas parametrizadas------" && mvn test -Dtest="AritmeticaParametrizadaTest" && "------Fin de las pruebas parametrizadas------" 
+          name: TestParametrizado
+          command: mvn test -Dtest="AritmeticaParametrizadaTest"
       - run:
-          name: Test 
-          command: echo "------Inicio de las pruebas con Mokito------" && mvn test -Dtest="FakeAlumnoDAOTest" && echo "------Fin de las pruebas con Mokito------" 
+          name: TestMokito
+          command: mvn test -Dtest="FakeAlumnoDAOTest"
       - run:
-          name: Test 
-          command: echo "------Inicio de las pruebas con Google------" && mvn test -Dtest="GoogleTest" && echo "------Fin de las pruebas con Google------" 
+          name: TestGoogle
+          command: mvn test -Dtest="GoogleTest"
       - run:
-          name: Test 
-          command: echo "------Inicio de las pruebas de MernCrud------" && mvn test -Dtest="MernCrudTest" && echo "------Fin de las pruebas de MernCrud------"
+          name: TestMernCrud
+          command: mvn test -Dtest="MernCrudTest"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
