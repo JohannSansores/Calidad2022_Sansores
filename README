@@ -4,6 +4,8 @@ DAO (Mokito) 4
 Funcionales google 1
 Funcionales 4 (me falta buscar) xd
 
+Página para integración continua
+https://app.circleci.com/pipelines/github/JohannSansores
 
 Se debe agregar un 
   build-and-test:  Esto se agrega
