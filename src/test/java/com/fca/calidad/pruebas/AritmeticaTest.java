@@ -61,7 +61,7 @@ public class AritmeticaTest {
 		//Verificar
 		assertThat(resultadoEsperado, is(resultadoEjecucion));
 	}
-	
+	/*
 	@Test(expected = ArithmeticException.class)
 	public void division0Test() {
 		//Inicializar
@@ -72,7 +72,7 @@ public class AritmeticaTest {
 		//Verificar
 		//assertThat(resultadoEsperado, is(resultadoEjecucion));
 	}
-	/*
+	
 	@Test
 	public void sumaTestFalla() {
 		//Inicializar

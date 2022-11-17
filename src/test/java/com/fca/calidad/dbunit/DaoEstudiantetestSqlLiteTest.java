@@ -1,4 +1,4 @@
-package com.fca.calidad.DoublesDAO;
+package com.fca.calidad.dbunit;
 
 
 import java.io.File;
