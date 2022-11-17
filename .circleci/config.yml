@@ -25,29 +25,19 @@ jobs:
       # Then run your tests!
       - run:
           name: Test
-#          command: 
-          command: echo "Inicio de las pruebas de calculadora" && mvn test -Dtest="AritmeticaTest" && echo "Fin de las pruebas de calculadora"
-#          command: 
-#      - run:
-#          name: Test
-#          command: echo "Inicia de las pruebas parametrizadas"
-#          command: mvn test -Dtest="AritmeticaParametrizadaTest"
-#          command: echo "Fin de las pruebas parametrizadas"
-#      - run:
-#          name: Test
-#          command: echo "Inicio de las pruebas con Mokito"
-#          command: mvn test -Dtest="FakeAlumnoDAOTest"
-#          command: echo "Fin de las pruebas con Mokito"
-#      - run:
-#          name: Test
-#          command: echo "Inicio de las pruebas con Google"
-#          command: mvn test -Dtest="GoogleTest"
-#          command: echo "Fin de las pruebas con Google"
-#      - run:
-#          name: Test
-#          command: echo "Inicio de las pruebas de MernCrud"
-#          command: mvn test -Dtest="MernCrudTest"
-#          command: echo "Fin de las pruebas de MernCrud"
+          command: echo "------Inicio de las pruebas de calculadora------" && mvn test -Dtest="AritmeticaTest" && echo "------Fin de las pruebas de calculadora------"
+      - run:
+          name: Test
+          command: echo "------Inicia de las pruebas parametrizadas------" && mvn test -Dtest="AritmeticaParametrizadaTest" && "------Fin de las pruebas parametrizadas------" 
+      - run:
+          name: Test 
+          command: echo "------Inicio de las pruebas con Mokito------" && mvn test -Dtest="FakeAlumnoDAOTest" && echo "------Fin de las pruebas con Mokito------" 
+      - run:
+          name: Test 
+          command: echo "------Inicio de las pruebas con Google------" && mvn test -Dtest="GoogleTest" && echo "------Fin de las pruebas con Google------" 
+      - run:
+          name: Test 
+          command: echo "------Inicio de las pruebas de MernCrud------" && mvn test -Dtest="MernCrudTest" && echo "------Fin de las pruebas de MernCrud------"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
