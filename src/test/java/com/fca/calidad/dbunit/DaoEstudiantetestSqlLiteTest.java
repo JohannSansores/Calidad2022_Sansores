@@ -220,5 +220,33 @@ public class DaoEstudiantetestSqlLiteTest extends TestCase{
 		}
 	}
 	
+	@Test
+	public void testUpdate() {
+	 
+		DAOEstudianteSQLlite daoSQLite = new DAOEstudianteSQLlite ();
+		
+		Estudiante Estudiante2 = daoSQLite.findEstudiante(1);
+		Estudiante2.setEmail("nuevo@mail.com");
+		daoSQLite.updateEmailEstudiante(Estudiante2);
+		
+		//verify
+		try {
+			IDataSet databaseDataSet = getConnection().createDataSet(); //esta es toda la base de datos
+			
+			ITable actualTable = databaseDataSet.getTable("Estudiante");
+			
+			//Leer el archivo con el resultado esperado
+			IDataSet expectedDataSet = new FlatXmlDataSetBuilder().build(new File("src/resources/update_result.xml"));
+			ITable expectedTable = expectedDataSet.getTable("Estudiante");
+			
+			Assertion.assertEquals(expectedTable, actualTable);
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			fail("Error in insert ttest: " + e.getMessage());
+		}
+	}
+	
 	//hacer borrar y editar
 }
