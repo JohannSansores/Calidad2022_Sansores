@@ -1,8 +1,14 @@
+Unitarias (Mockito): crear, borrar,actualizar, consultar *LISTO*
+
+Integración (Dbunit): crear, borrar,actualizar, buscar *FALTA ELIMINAR Y BORRAR*
+
+Funcionales (mern crud - katalon ) : crear, borrar,actualizar, buscar  *LISTO*
+
 Aritmetica 4
 Parametrizadas 3
 DAO (Mokito) 4
 Funcionales google 1
-Funcionales 4 (me falta buscar) xd
+Funcionales 4
 
 Página para integración continua
 https://app.circleci.com/pipelines/github/JohannSansores

@@ -95,10 +95,10 @@ public class DaoEstudiantetestSqlLiteTest extends TestCase{
 		return connection;
 	}
 
-	/*
+	//Test para crear alumno
 	@Test
 	public void testCrear() {
-		Estudiante alumno = new Estudiante ("alumno004","alumno004apellido","holaalummno004@hola" ,"carrera4");
+		Estudiante alumno = new Estudiante ("alumno4","alumn4apellido","holaalummno4@hola" ,"carrera4");
 		
 		int id = daoSQLite.createEstudiante(alumno);
 		alumno.setId(id);
@@ -120,7 +120,7 @@ public class DaoEstudiantetestSqlLiteTest extends TestCase{
 			// TODO: handle exception
 			fail("Error in insert ttest: " + e.getMessage());
 		}
-	}*/
+	}
 	/*
 	
 	@Test
@@ -148,7 +148,7 @@ public class DaoEstudiantetestSqlLiteTest extends TestCase{
 			fail("Error in insert ttest: " + e.getMessage());
 		}
 	}
-	*/ /*
+	
 	@Test
 	public void testCrearCompararTabla() {
 		//<Estudiante id="3" nombre="nombre1" apellido="apellido1" email="email" carrera = "carrera"/>
@@ -173,7 +173,7 @@ public class DaoEstudiantetestSqlLiteTest extends TestCase{
 			// TODO: handle exception
 			fail("Error in insert ttest: " + e.getMessage());
 		}
-	} */
+	} 
 	
 	@Test
 	public void testCrearCompararTabla4() {
@@ -199,8 +199,9 @@ public class DaoEstudiantetestSqlLiteTest extends TestCase{
 			// TODO: handle exception
 			fail("Error in insert ttest: " + e.getMessage());
 		}
-	}
+	} */
 	
+	//Test para buscar alumno
 	@Test
 	public void testFind() {
 		Estudiante alumno;

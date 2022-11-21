@@ -32,6 +32,8 @@ public class MernCrudTest {
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
     js = (JavascriptExecutor) driver;
   }
+  
+  //Test para crear un usuario
   @Test
   public void agregarUsuarioTest() throws Exception {
     driver.get("https://mern-crud.herokuapp.com/");
@@ -56,12 +58,29 @@ public class MernCrudTest {
     //assertThat(mensaje, is ("Successfully added!"));
     assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Prueba1[\\s\\S]*$")); //comentar
   }
- 
+  
+  //Test para editar un usuario ES IMPORTANTE CREARLO ANTES
   @Test
   public void editarUsuarioTest() throws Exception {
     driver.get("https://mern-crud.herokuapp.com/");
+    driver.findElement(By.xpath("//div[@id='root']/div/div[2]/button")).click();
+    pause(500);
+    driver.findElement(By.name("name")).click();
+    driver.findElement(By.name("name")).clear();
+    driver.findElement(By.name("name")).sendKeys("Prueba1");
+    driver.findElement(By.name("email")).click();
+    driver.findElement(By.name("email")).clear();
+    driver.findElement(By.name("email")).sendKeys("Prueba@correo.com");
+    driver.findElement(By.name("age")).click();
+    driver.findElement(By.name("age")).clear();
+    driver.findElement(By.name("age")).sendKeys("22");
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Gender'])[2]/following::div[1]")).click();
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Male'])[1]/following::div[2]")).click();
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
+    pause(1000);
+    driver.findElement(By.xpath("//i")).click();
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr[4]/td[5]/button")).click();
-    pause(3000);
+    pause(300);
     driver.findElement(By.name("name")).click();
     driver.findElement(By.name("name")).clear();
     driver.findElement(By.name("name")).sendKeys("Prueba1Nuevo");
@@ -71,11 +90,55 @@ public class MernCrudTest {
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
     driver.findElement(By.xpath("//i")).click();
     //Warning: assertTextPresent may require manual changes
-    assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Prueba1nuevo[\\s\\S]*$"));
+    assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Prueba1Nuevo[\\s\\S]*$"));
   }
+  
+  //Test para editar un usuario ES IMPORTANTE CREARLO ANTES
   @Test
-  public void testUntitledTestCase() throws Exception {
+  public void EliminarUsuarioTest() throws Exception {
     driver.get("https://mern-crud.herokuapp.com/");
+    driver.findElement(By.xpath("//div[@id='root']/div/div[2]/button")).click();
+    pause(500);
+    driver.findElement(By.name("name")).click();
+    driver.findElement(By.name("name")).clear();
+    driver.findElement(By.name("name")).sendKeys("Prueba1Nuevo");
+    driver.findElement(By.name("email")).click();
+    driver.findElement(By.name("email")).clear();
+    driver.findElement(By.name("email")).sendKeys("Prueba@correo.com");
+    driver.findElement(By.name("age")).click();
+    driver.findElement(By.name("age")).clear();
+    driver.findElement(By.name("age")).sendKeys("22");
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Gender'])[2]/following::div[1]")).click();
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Male'])[1]/following::div[2]")).click();
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
+    pause(10000);
+    driver.findElement(By.xpath("//i")).click();
+    driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr[5]/td[5]/button[2]")).click();
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Prueba1Nuevo'])[2]/following::button[1]")).click();
+    //Warning: assertTextNotPresent may require manual changes
+    assertFalse(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Prueba1Nuevo[\\s\\S]*$"));
+  }
+  
+  //Test para buscar un usuario
+  @Test
+  public void BuscarUsuarioTest() throws Exception {
+    driver.get("https://mern-crud.herokuapp.com/");
+    driver.findElement(By.xpath("//div[@id='root']/div/div[2]/button")).click();
+    pause(500);
+    driver.findElement(By.name("name")).click();
+    driver.findElement(By.name("name")).clear();
+    driver.findElement(By.name("name")).sendKeys("Prueba1Nuevo");
+    driver.findElement(By.name("email")).click();
+    driver.findElement(By.name("email")).clear();
+    driver.findElement(By.name("email")).sendKeys("Prueba@correo.com");
+    driver.findElement(By.name("age")).click();
+    driver.findElement(By.name("age")).clear();
+    driver.findElement(By.name("age")).sendKeys("22");
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Gender'])[2]/following::div[1]")).click();
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Male'])[1]/following::div[2]")).click();
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Woah!'])[1]/following::button[1]")).click();
+    pause(10000);
+    driver.findElement(By.xpath("//i")).click();
     driver.findElement(By.xpath("//div[@id='root']/div/div[2]/table/tbody/tr[5]/td[5]/button[2]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Prueba1Nuevo'])[2]/following::button[1]")).click();
     //Warning: assertTextNotPresent may require manual changes

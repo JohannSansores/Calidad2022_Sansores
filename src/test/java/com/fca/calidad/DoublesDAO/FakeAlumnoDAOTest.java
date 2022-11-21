@@ -29,7 +29,8 @@ public class FakeAlumnoDAOTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	
+	//Test para crear un alumno
 	@Test
 	public void addAlumnoTest() {
 		when(DAO.addAlumno(any(Alumno.class))).thenAnswer(new Answer<Boolean>() {
@@ -59,6 +60,7 @@ public class FakeAlumnoDAOTest {
 	System.out.println("Resultado addAlumno: " + res);
 	}
 	
+	//Test para eliminar alumno
 	@Test
 	public void deleteAlumnoTest() {
 		when(DAO.deleteAlumno(any(Alumno.class))).thenAnswer(new Answer<Boolean>() {
@@ -90,6 +92,7 @@ public class FakeAlumnoDAOTest {
 		System.out.println("Resultado deleteAlumno: " + res);
 	}
 	
+	//Test para editar alumno
 	@Test
 	public void updateEmailTest() {
 		when(DAO.updateEmail(any(Alumno.class))).thenAnswer(new Answer<Boolean>() {
@@ -121,6 +124,7 @@ public class FakeAlumnoDAOTest {
 		System.out.println("Resultado updateEmail: " + res);
 	}
 	
+	//Test para buscar alumno
 	@Test
 	public void searchAlumnoTest() {
 		when(DAO.searchAlumno(anyString())).thenAnswer(new Answer<Alumno>() {
