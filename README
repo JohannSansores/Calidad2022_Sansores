@@ -1,7 +1,5 @@
 Unitarias (Mockito): crear, borrar,actualizar, consultar *LISTO*
-
 Integración (Dbunit): crear, borrar,actualizar, buscar *FALTA ELIMINAR Y BORRAR*
-
 Funcionales (mern crud - katalon ) : crear, borrar,actualizar, buscar  *LISTO*
 
 Aritmetica 4
@@ -12,7 +10,6 @@ Funcionales 4
 
 Página para integración continua
 https://app.circleci.com/pipelines/github/JohannSansores
-
 
 Pipeline
 Se debe agregar un 
