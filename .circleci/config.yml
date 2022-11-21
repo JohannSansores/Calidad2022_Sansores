@@ -32,9 +32,9 @@ jobs:
       - run:
           name: TestMokito
           command: mvn test -Dtest="FakeAlumnoDAOTest"
-      - run:
-          name: TestGoogle
-          command: mvn test -Dtest="GoogleTest"
+      #- run:
+      #    name: TestGoogle
+      #    command: mvn test -Dtest="GoogleTest"
       - run:
           name: TestMernCrud
           command: mvn test -Dtest="MernCrudTest"
